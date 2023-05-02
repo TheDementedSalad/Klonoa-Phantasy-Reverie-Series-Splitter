@@ -73,6 +73,7 @@ init {
 update {
 	if (!vars.Helper.Update()) return false;
 	vars.Helper.MapWatchersToCurrent(current);
+	var Time = vars.Helper["Time"];
 	var playdemo_flag = vars.Helper["playdemo_flag"];
 	var time_attack = vars.Helper["time_attack"];
 	var visionNumber = vars.Helper["visionNumber"];
