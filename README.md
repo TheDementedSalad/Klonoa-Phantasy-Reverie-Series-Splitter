@@ -1,6 +1,7 @@
 # Klonoa Phantasy Reverie Series Autosplitter
 
 Supports Door to Phantomile & Lunatea's Veil (Any%/All Visions/100%)
+
 Supports IGT, including adding the additional time from Chamber of Fun/Horror in KPR2
 
 Splits can be obtained from https://www.speedrun.com/klonoaprs/resources
