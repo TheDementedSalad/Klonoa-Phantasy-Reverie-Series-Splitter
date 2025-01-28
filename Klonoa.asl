@@ -1,4 +1,4 @@
-/* Klonoa Phantasy Reverie Series Autosplitter Version 1.3.2 (21/01/2025)
+/* Klonoa Phantasy Reverie Series Autosplitter Version 1.3.3 (28/01/2025)
 Supports Door to Phantomile & Lunatea's Veil (Any%/All Visions/100%)
 Supports IGT, including adding the additional time from Chamber of Fun/Horror in KPR2
 Splits can be obtained from https://www.speedrun.com/klonoaprs/resources
@@ -77,6 +77,9 @@ init {
 update {
 	if (!vars.Helper.Update()) return false;
 	vars.Helper.MapWatchersToCurrent(current);
+	if(current.Game == 1){
+		var Time = vars.Helper["Time"];
+	}
 	if(current.Game == 2){
 		var playdemo_flag = vars.Helper["playdemo_flag"];
 		var time_attack = vars.Helper["time_attack"];
