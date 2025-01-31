@@ -1,4 +1,4 @@
-/* Klonoa Phantasy Reverie Series Autosplitter Version 1.3.3 (28/01/2025)
+/* Klonoa Phantasy Reverie Series Autosplitter Version 1.3.4 (31/01/2025)
 Supports Door to Phantomile & Lunatea's Veil (Any%/All Visions/100%)
 Supports IGT, including adding the additional time from Chamber of Fun/Horror in KPR2
 Splits can be obtained from https://www.speedrun.com/klonoaprs/resources
@@ -90,9 +90,11 @@ update {
 }
 
 start {
-	var IGT = vars.Helper["IGT"];
 	if(current.Game == 1) return current.Time > 0f && old.Time == 0f && current.VisionID == 1;							// only start KP1 if IGT has increased from 0 and the first level is running
-	if(current.Game == 2) return IGT.Current != IGT.Old && current.roomNumber == 256 && current.playdemo_flag == 0;		// only starts KPR2 if IGT has changed, room is the first room of Sea of Tears, and the demo isn't playing
+	if(current.Game == 2) {
+		var IGT = vars.Helper["IGT"];
+		return IGT.Current != IGT.Old && current.roomNumber == 256 && current.playdemo_flag == 0;		// only starts KPR2 if IGT has changed, room is the first room of Sea of Tears, and the demo isn't playing
+	}
 }
 
 split {	
